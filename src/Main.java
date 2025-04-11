@@ -33,14 +33,14 @@ public class Main {
         //OUTPUTS
         double expectedMonthlyPayments = 0;
         // totalInterestPaid = total with interest - total without interest
-        double totalInterestPaid = (numberOfPayment * expectedMonthlyPayments) - principalAmount;
+        double totalInterestPaid = 0;
 
         // DO WORK
 //        This calculator would use a compounded interest formula.
 //        M=P×(i*(1+i)^n / ((1+i)^n)-1)
 
         expectedMonthlyPayments = principalAmount * (monthlyInterestRate * Math.pow((1 + monthlyInterestRate), numberOfPayment)) / (Math.pow((1 + monthlyInterestRate), numberOfPayment) - 1);
-
+        totalInterestPaid = (numberOfPayment * expectedMonthlyPayments) - principalAmount;
 //        - Monthly Payment (M)
 //        - Principal (P): This is the total amount of the loan.
 //        - Annual Interest Rate (r): The nominal annual interest rate in
@@ -51,6 +51,7 @@ public class Main {
 //        - Monthly Interest Rate (i): This is the annual interest rate
 //        divided by 12, i.e. r/12
 //        - Total Interest =(M×n)−P
+
 
 //        b. It would display the expected monthly payment and total
 //        interest paid
